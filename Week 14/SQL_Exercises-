@@ -1,0 +1,40 @@
+curl http://downloads.mysql.com/docs/world.sql.zip >> world.zip
+unzip world.zip
+mysql -u root
+
+---
+
+CREATE DATABASE `world`;
+exit;
+
+---
+
+mysql -u root world < world.sql
+mysql -u root
+
+---
+
+SQL Tutorial
+
+use world;
+show tables;
+select * from city limit 10;
+select * from country limit 10;
+select * from countryLanguage where `percentage` > 75 limit 10;
+describe city
+
+## What are the relationships in this database?
+
+
+##Select countries and the languages they have which are not official
+
+
+## Show 10 largest cities
+
+
+## Show 10 largest cities name, population and country NAME
+
+
+## How do we aggregate count of languages by country? (not code, but name)
+
+## How about average # of official languages per country?
